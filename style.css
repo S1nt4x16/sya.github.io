@@ -1,0 +1,144 @@
+/* Reset and Global Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background: #f8e8e8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.container {
+  text-align: center;
+  color: #4e342e;
+  padding: 20px;
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+  z-index: 2;
+}
+
+.background img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  opacity: 0.6;
+}
+
+/* Animated Text */
+.animated-text {
+  animation: textAnimation 3s ease-in-out infinite;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin: 10px 0;
+  color: #4e342e;
+}
+
+.subtext {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+button {
+  background: #ffcc80;
+  color: #4e342e;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  margin-top: 15px;
+  z-index: 10;
+  position: relative;
+}
+
+button:hover {
+  background: #ffe0b2;
+  transform: scale(1.1);
+}
+
+/* Popup Styling */
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  color: #333;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 300px;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+  z-index: 3;
+}
+
+.popup-content h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.bear-cake {
+  width: 100px;
+  margin-bottom: 10px;
+}
+
+/* Balloons */
+.balloons {
+  position: absolute;
+  bottom: -200px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  z-index: 0;
+}
+
+.balloon {
+  width: 50px;
+  height: 70px;
+  background: red;
+  border-radius: 50%;
+  position: relative;
+  animation: float 6s infinite ease-in-out;
+}
+
+.balloon::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  width: 2px;
+  height: 20px;
+  background: #333;
+}
+
+/* Animations */
+@keyframes textAnimation {
+  0%, 100% { color: #4e342e; }
+  50% { color: #ff8a65; }
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-200px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

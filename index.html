@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday!</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+  <div class="container">
+
+    <!-- Teks Utama -->
+    <h1 id="greeting" class="animated-text">Happy Birthday, Beruangkuuuuuu! 🐻</h1>
+    <p class="subtext animated-text">Panjang umur sehat selalu yah sayangkuuuu cintaku manisku duniaku. 💖</p>
+    
+    <!-- Spacer -->
+    <div style="margin: 20px 0;"></div>
+
+    <button id="openPopup">Coba klik deh🐾</button>
+
+    <!-- Popup -->
+    <div class="popup" id="popup">
+      <div class="popup-content">
+        <img src="img/istockphoto-1201148433-612x612.jpg" alt="Bear with Cake" class="bear-cake">
+        <h2>🎂 Selamat Ulang Tahun! 🎂</h2>
+        <p>Selamat ulang tahun Tasya Adelia Ramadhani wish u all the best yah sayangkuuuuu 💕</p>
+        <button id="closePopup">Tiup Lilin dulu gak sih</button>
+      </div>
+    </div>
+
+    <!-- Balon Melayang -->
+    <div class="balloons">
+      <div class="balloon" style="background-color: #ff8a65;"></div>
+      <div class="balloon" style="background-color: #ffd54f;"></div>
+      <div class="balloon" style="background-color: #4fc3f7;"></div>
+    </div>
+  </div>
+
+  <!-- Background Music -->
+  <audio id="bgMusic" loop>
+    <source src="https://www.bensound.com/bensound-music/bensound-happyrock.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
